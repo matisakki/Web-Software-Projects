@@ -1,0 +1,28 @@
+<% layout("./layout.eta") %>
+
+<h2><%= it.id %> </h2>
+
+<form method="POST" action="/lists/<%= it.id %>/items">
+  <input type="text" name="name" />
+  <input type="submit" value="Add item" />
+</form>
+
+
+<br>
+<% it.notCollected.forEach((obj) => { %>
+  <li>&#x2022;  <%= obj.name %></li>
+      <li><form method="POST"
+      action="/lists/<%= it.id %>/items/<%= obj.id %>/collect">
+      <input type="submit" value="Mark collected!" />
+      </form>
+      </li>
+      <br>
+<% }); %>
+
+<% it.collected.forEach((obj) => { %>
+  <li>
+      &#x2022;  <del><%= obj.name %></del>
+</li>
+<br>
+<% }); %>
+<a href="/lists"> shopping lists </a>

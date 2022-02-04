@@ -1,0 +1,21 @@
+<% layout("./layout.eta") %>
+
+<h1> Shared shopping lists </h1>
+<div>
+<% var lists =  0%>
+<% var items =  0%>
+<% it.listCount.forEach((obj) => { %>
+  <li>
+      <% lists =  lists + 1 %>
+</li>
+<% }); %>
+<% it.itemCount.forEach((obj) => { %>
+  <li>
+      <% items =  items + 1%>
+</li>
+<% }); %>
+</div>
+<p> Shopping lists: <%= lists %></p>
+<p> Shopping list items: <%= items %></p>
+
+<a href="/lists"> Lists </a>
