@@ -38,4 +38,3 @@ if (Deno.args.length > 0) {
 }
 
 serve(handleRequest, { port: port });
-serve(handleRequest, { port: 7777 });
