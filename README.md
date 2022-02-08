@@ -1,5 +1,5 @@
 # Project 1: Shared shopping list
 
-Write the documentation of your project here. Do not include your personal details (e.g. name or student number).
+First project in the course. Would add link heroku link here for trying the shopping list app, but just now i have problems adding this project to heroku, TBC.
+Website for creating shopping lists and adding items to them. There is option for adding and removing items from shopping lists. Lists are in aplhabetic order.
 
-Remember to include the address of the online location where your project is running as it is a key part of the submission.
