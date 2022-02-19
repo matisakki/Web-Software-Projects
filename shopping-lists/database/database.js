@@ -1,12 +1,19 @@
 import { Pool } from "https://deno.land/x/postgres@v0.14.3/mod.ts";
 
 const CONCURRENT_CONNECTIONS = 2;
-let connectionPool = new Pool({}, CONCURRENT_CONNECTIONS);
+const connectionPool = new Pool({
+    hostname: "hattie.db.elephantsql.com",
+    database: "ydwkmupx",
+    user: "ydwkmupx",
+    password: "s8cjPFzq-Dee8lgDYp0QAeZ31dajcllz",
+    port: 5432,
+}, CONCURRENT_CONNECTIONS);
+/*let connectionPool = new Pool({}, CONCURRENT_CONNECTIONS);
 if (Deno.env.get("DATABASE_URL")) {
   connectionPool = new Pool(Deno.env.get("DATABASE_URL"), CONCURRENT_CONNECTIONS);
 } else {
   connectionPool = new Pool({}, CONCURRENT_CONNECTIONS);
-}
+}*/
 
 const executeQuery = async (query, ...args) => {
   const response = {};
